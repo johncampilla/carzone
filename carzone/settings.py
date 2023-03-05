@@ -74,13 +74,23 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'carzone_db',
+        'USER': 'postgres',
+        'PASSWORD':'640515john',
+        'HOST':'localhost',
+
+
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -126,8 +136,10 @@ STATICFILES_DIRS = [
     BASE_DIR / 'carzone/static',
 ]
 
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# Media Settings
+
+MEDIA_ROOT = (BASE_DIR/'media')
+MEDIA_URL = '/media/'
 # STATICFILES_DIRS = [
 #     os.path.join(BASE_DIR, 'carzone/static'),
 # ]
