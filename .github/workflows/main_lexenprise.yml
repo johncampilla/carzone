@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'lexenprise'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0329013449C34CAFB57D8069A2A78B58 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_532DB7F2466746D98CECC840B171C37D }}
